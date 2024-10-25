@@ -1,6 +1,12 @@
 
 public class CalculatorApp {
     public static void main(String[] args) {
-        System.out.println("Hello and welcome!");
+        CalculatorView view = new CalculatorView();
+
+        // Создание контроллера с передачей представления
+        new CalculatorController(view);
+
+        // Устанавливаем видимость окна
+        view.setVisible(true);
     }
 }
